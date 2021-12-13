@@ -24,7 +24,6 @@ export function Debounce(options: DebounceOptions): MethodDecorator {
 
     opts.methods[handler] = function(...args: any[]) {
       clear()
-      //@ts-ignore
       timeoutId = setTimeout(() => {
         timeoutId = 0
         originalFn.apply(this, args)
